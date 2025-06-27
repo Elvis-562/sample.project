@@ -22,29 +22,9 @@ warnings.filterwarnings("ignore")
 df=pd.read_csv("AviationData.csv",encoding= "latin-1",low_memory=False)
 df
 ```
-
-```python
-|Event.Id |Investigation.Type| 	Accident.Number |	Event.Date| 	Location 	|Country |	Latitude |	Longitude |	Airport.Code |	Airport.Name 	... |	Purpose.of.flight |	Air.carrier
-|Total.Fatal.Injuries 	|Total.Serious.Injuries 	|Total.Minor.Injuries 	|Total.Uninjured |	Weather.Condition| 	Broad.phase.of.flight |	Report.Status |	Publication.Date|
-0 	20001218X45444 	Accident 	SEA87LA080 	1948-10-24 	MOOSE CREEK, ID 	United States 	NaN 	NaN 	NaN 	NaN 	... 	Personal 	NaN 	2.0 	0.0 	0.0 	0.0 	UNK 	Cruise 	Probable Cause 	NaN
-1 	20001218X45447 	Accident 	LAX94LA336 	1962-07-19 	BRIDGEPORT, CA 	United States 	NaN 	NaN 	NaN 	NaN 	... 	Personal 	NaN 	4.0 	0.0 	0.0 	0.0 	UNK 	Unknown 	Probable Cause 	19-09-1996
-2 	20061025X01555 	Accident 	NYC07LA005 	1974-08-30 	Saltville, VA 	United States 	36.922223 	-81.878056 	NaN 	NaN 	... 	Personal 	NaN 	3.0 	NaN 	NaN 	NaN 	IMC 	Cruise 	Probable Cause 	26-02-2007
-3 	20001218X45448 	Accident 	LAX96LA321 	1977-06-19 	EUREKA, CA 	United States 	NaN 	NaN 	NaN 	NaN 	... 	Personal 	NaN 	2.0 	0.0 	0.0 	0.0 	IMC 	Cruise 	Probable Cause 	12-09-2000
-4 	20041105X01764 	Accident 	CHI79FA064 	1979-08-02 	Canton, OH 	United States 	NaN 	NaN 	NaN 	NaN 	... 	Personal 	NaN 	1.0 	2.0 	NaN 	0.0 	VMC 	Approach 	Probable Cause 	16-04-1980
-... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	... 	...
-88884 	20221227106491 	Accident 	ERA23LA093 	2022-12-26 	Annapolis, MD 	United States 	NaN 	NaN 	NaN 	NaN 	... 	Personal 	NaN 	0.0 	1.0 	0.0 	0.0 	NaN 	NaN 	NaN 	29-12-2022
-88885 	20221227106494 	Accident 	ERA23LA095 	2022-12-26 	Hampton, NH 	United States 	NaN 	NaN 	NaN 	NaN 	... 	NaN 	NaN 	0.0 	0.0 	0.0 	0.0 	NaN 	NaN 	NaN 	NaN
-88886 	20221227106497 	Accident 	WPR23LA075 	2022-12-26 	Payson, AZ 	United States 	341525N 	1112021W 	PAN 	PAYSON 	... 	Personal 	NaN 	0.0 	0.0 	0.0 	1.0 	VMC 	NaN 	NaN 	27-12-2022
-88887 	20221227106498 	Accident 	WPR23LA076 	2022-12-26 	Morgan, UT 	United States 	NaN 	NaN 	NaN 	NaN 	... 	Personal 	MC CESSNA 210N LLC 	0.0 	0.0 	0.0 	0.0 	NaN 	NaN 	NaN 	NaN
-88888 	20221230106513 	Accident 	ERA23LA097 	2022-12-29 	Athens, GA 	United States 	NaN 	NaN 	NaN 	NaN 	... 	Personal 	NaN 	0.0 	1.0 	0.0 	1.0 	NaN 	NaN 	NaN 	30-12-2022
-
-88889 rows × 31 columns
-```
-
 The data contains 31 columns, from this data we should be able to identify aircrafts that offer high and low risks to the shareholders.
 
 This data contains missing values so my first step is to clean this data.
-
 
 ```python
 #We can get information about this dataset
@@ -96,15 +76,15 @@ This shows us the number of columns and rows in the dataset.It also shows the nu
 df.describe()
 ```
 ```python
-        Number.of.Engines 	Total.Fatal.Injuries 	Total.Serious.Injuries 	Total.Minor.Injuries 	Total.Uninjured
-count 	82805.000000 	        77488.000000 	         76379.000000 	          76956.000000       	82977.000000
-mean 	  1.146585 	             0.647855 	           0.279881 	              0.357061 	          5.325440
-std 	  0.446510 	             5.485960 	           1.544084 	              2.235625            27.913634
-min 	  0.000000 	             0.000000              0.000000 	              0.000000 	          0.000000
-25% 	  1.000000       	       0.000000              0.000000 	              0.000000 	          0.000000
-50% 	 1.000000 	            0.000000 	             0.000000 	              0.000000 	          1.000000
-75% 	  1.000000 	             0.000000 	           0.000000 	              0.000000 	          2.000000
-max 	  8.000000 	             349.000000 	         161.000000 	            380.000000 	        699.000000
+       	Number.of.Engines 	Total.Fatal.Injuries 	Total.Serious.Injuries 	Total.Minor.Injuries 	Total.Uninjured
+count 	   82805.000000       77488.000000 	        76379.000000 	         76956.000000          82977.000000
+mean 	    1.146585      	    0.647855 	              0.279881 	           0.357061 	            5.325440
+ std 	     0.446510 	          5.485960              	1.544084 	          2.235625 	            27.913634
+min      	0.000000 	          0.000000 	            0.000000             	0.000000 	            0.000000
+25%      	1.000000 	         0.000000 	             0.000000 	            0.000000 	            0.000000
+50%      	1.000000 	         0.000000 	             0.000000 	            0.000000 	            1.000000
+75% 	     1.000000 	         0.000000 	             0.000000 	            0.000000 	            2.000000
+max 	     8.000000 	        349.000000 	            161.000000 	          380.000000 	          699.000000
 ```
 
 This shows the aggregation data of the numeric values in the dataset.
