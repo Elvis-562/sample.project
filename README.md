@@ -14,3 +14,9 @@ Once this goals are met we can identify which aircrafts are suitable for any sta
 The data  comes from [Kaggle](https://www.kaggle.com/datasets/khsamaha/aviation-accident-database-synopses) which has information about aviation accidents from 1962 to 2023.
 
 To load the dataset we use pandas library.
+'''python
+import pandas as pd
+import warnings
+warnings.filterwarnings("ignore")
+df=pd.read_csv("AviationData.csv",encoding= "latin-1",low_memory=False)
+df
