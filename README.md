@@ -15,12 +15,8 @@ The data  comes from [Kaggle](https://www.kaggle.com/datasets/khsamaha/aviation-
 
 To load the dataset we use pandas library.
 
-import pandas as pd
-
-import warnings
-
-warnings.filterwarnings("ignore")
-
-df=pd.read_csv("AviationData.csv",encoding= "latin-1",low_memory=False)
-
-df
+* import pandas as pd
+* import warnings
+* warnings.filterwarnings("ignore")
+* df=pd.read_csv("AviationData.csv",encoding= "latin-1",low_memory=False)
+* df
