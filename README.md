@@ -186,6 +186,21 @@ This Bar chart shows the relationship between total fatal injuries and make.
 This is  a bar chart showing the  relationship between purpose of flight and the number of uninjured passengers.
 ## Observation
 * The most common reason for passengers to take flights is personal flights.
+## Interactive dashboard
+
+I made use of three interactive dashboards.
+![Dashboard Comparing Riskiest and Safest Aircrafts](https://github.com/user-attachments/assets/02f67a0a-1b80-4313-a448-49ede1d9f8b5)
+
+This is a dashboard comparing the riskiest and the safest aircraft.
+
+![Dashboard Comparing Purpose of flight](https://github.com/user-attachments/assets/9d111a31-74cb-4050-a74b-95d6a03772ef)
+
+This is a  dashboard comparing the total fatal injuries and uninjured in purpose of flight.
+
+![Dashboard Comparing Fatal Injuries and Uninjured by Model and Weather Condition](https://github.com/user-attachments/assets/5e2763ad-5511-498d-825b-8d41291aa7b4)
+
+The dashboard above compares total fatal injuries and total uninjured by model and weather condition.
+
 ## Conclusion
 * The most common type of aircraft used for travel is Cessna and it's also the riskiest since it has the highest number of fatalities among the aircraft.
 * Boeing is the safest aircraft and I would advise the business shareholders to purchase the Boeing Aircraft since it offers low risk.
